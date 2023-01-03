@@ -3,11 +3,8 @@
 <h2>Importante - ARQUIVO DE EXEMPLO  exemplo-docker-compose-postgrtesql.yml</h2>
 <h4>Volumes</h4>
 <strong>/mnt/volume-docker:/var/lib/postgresql/data</strong> === no exemplo a pasta da máquina local 
-<em>/mnt/volume-docker</em> tem os mesmos dados da pasta <em>/var/lib/postgresql/data</em> do container.   
-<strong>pg-config:/etc/postgresql</strong> === 
-    
-
-
+<em>/mnt/volume-docker</em>tem os mesmos dados da pasta <em>/var/lib/postgresql/data</em> do container.<br/>   
+<strong>pg-config:/etc/postgresql</strong> === <br/>
 
 
 
