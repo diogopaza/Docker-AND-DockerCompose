@@ -14,6 +14,7 @@ inicializar o serviço no Ubuntu == <strong>service docker start</strong>.
 
 <strong>docker images</strong> == lista as imagens disponiveis.
 
+<strong>docker start idContainer</strong> == inicia o container que está parado.<br/>
 <strong>docker stop idContainer</strong> == para o container selecionado.<br/>
 <strong>docker ps</strong> == lista os containers em atividade.<br/>
 <strong>docker ps -a </strong> == lista todos os containers, incluindo os que estiverem parados.<br/>
@@ -34,7 +35,7 @@ docker também será a porta 3306 do Linux que esta rodando no WSL do Windows.
  <strong>docker volume ls</strong> === lista os volumes docker disponíveis.
  
  <p>
- <strong>docker exec -it meu_container /bin/bash </strong><br>
+ <strong>docker exec -it meu_container bash </strong><br>
  Esse comando irá executar um o bash que é nosso console no linux.
  A flag -i permite mapear a entrada do teclado para o bashs e -t reserva o terminal.
  
