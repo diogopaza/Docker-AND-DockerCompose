@@ -14,6 +14,7 @@ inicializar o serviço no Ubuntu == <strong>service docker start</strong>.
 
 <strong>docker images</strong> == lista as imagens disponiveis.
 
+<strong>docker stop idContainer</strong> == para o container selecionado.<br/>
 <strong>docker ps</strong> == lista os containers em atividade.<br/>
 <strong>docker ps -a </strong> == lista todos os containers, incluindo os que estiverem parados.<br/>
 <strong>docker system prune -a</strong> == limpa containeres nao utilizados.<br/>
