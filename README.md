@@ -15,12 +15,13 @@ inicializar o serviço no Ubuntu == <strong>service docker start</strong>.
 <strong>docker images</strong> == lista as imagens disponiveis.
 <strong>docker start idContainer</strong> == inicia o container que está parado.<br/>
 <strong>docker stop idContainer</strong> == para o container selecionado.<br/>
+<strong>docker start idContainer</strong> == inicia o container que está parado.<br/>
 <strong>docker ps</strong> == lista os containers em atividade.<br/>
 <strong>docker ps -a </strong> == lista todos os containers, incluindo os que estiverem parados.<br/>
 <strong>docker run -d idContainer </strong> == flag -d o conainer é executado em segundo plano no terminal.<br/>
 <strong>docker run -P idContainer</strong> == mapeia automaticamente as portas do container.<br/>
 <strong>docker port idContainer</strong> == lista as portas do container.<br/>
-<strong>docker start idContainer</strong> == inicia o container que está parado.<br/>
+<strong>docker rm idContainer --force</strong> == para e exclui um container docker.<br/>
 <strong>docker system prune -a</strong> == limpa containeres nao utilizados.<br/>
 <strong>docker volumes prune</strong> == remove volumes nao utilizados.<br/>
 <strong>docker rmi <image_id></strong> == serve para excluir uma imagem do disco local.<br/>
