@@ -20,6 +20,7 @@ inicializar o serviço no Ubuntu == <strong>service docker start</strong>.
 <strong>docker ps -a </strong> == lista todos os containers, incluindo os que estiverem parados.<br/>
 <strong>docker run -d idContainer </strong> == flag -d o conainer é executado em segundo plano no terminal.<br/>
 <strong>docker run -P idContainer</strong> == mapeia automaticamente as portas do container, com o -P maiúsculo não é possível especificar a porta.<br/>
+<strong>docker run -p  portaDaMinhaMaquina:portaContainer idContainer</strong> == a flag -p (minúsculo) mapeia de forma específica as portas do container.<br/>
 <strong>docker port idContainer</strong> == lista as portas do container.<br/>
 <strong>docker rm idContainer --force</strong> == para e exclui um container docker.<br/>
 <strong>docker system prune -a</strong> == limpa containeres nao utilizados.<br/>
