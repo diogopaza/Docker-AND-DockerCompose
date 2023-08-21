@@ -18,6 +18,7 @@ inicializar o serviço no Ubuntu == <strong>service docker start</strong>.
 <strong>docker start idContainer</strong> == inicia o container que está parado.<br/>
 <strong>docker ps</strong> == lista os containers em atividade.<br/>
 <strong>docker inspect idImage</strong> == lista os detalhes da imagem.<br/>
+<strong>docker history idImage</strong> == visualiza as camadas da imagem.<br/>
 <strong>docker ps -a </strong> == lista todos os containers, incluindo os que estiverem parados.<br/>
 <strong>docker run -d idContainer </strong> == flag -d o conainer é executado em segundo plano no terminal.<br/>
 <strong>docker run -P idContainer</strong> == mapeia automaticamente as portas do container, com o -P maiúsculo não é possível especificar a porta.<br/>
