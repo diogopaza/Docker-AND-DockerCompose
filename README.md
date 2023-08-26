@@ -36,6 +36,12 @@ docker também será a porta 3306 do Linux que esta rodando no WSL do Windows.
  <p>Exemplo de container docker com postgres ===  <strong>docker run -v postgres-dados:/var/lib/postgresql/data -p 5432:5432 -e POSTGRES_PASSWORD=123 postgres</strong>. Pode-se adicionar a opção -d para rodar em segundo <em>background</em></p>
  
  iptables -t nat -L -n é possível ver o redirecionamento.
+
+ <h3>Fazendo build a partir de um Dockerfile</h3>
+
+ <strong>docker build -t nomeDaImagem:1.0 .</strong> == gera uma imagem a partir de um arquivo DockerFile, a flag -t é para definir o nome da imagem, e importante notar o 
+ . (ponto) ao final do comando, este define onde deve ser executado no caso o . (ponto) é o diretório atual. <br/>
+ 
  
  <h3>Volumes docker</h3>
  <strong>docker volume create NOMEVOLUME</strong> === cria um novo volume docker.<br>
