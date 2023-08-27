@@ -42,6 +42,13 @@ docker também será a porta 3306 do Linux que esta rodando no WSL do Windows.
  <strong>docker build -t nomeDaImagem:1.0 .</strong> == gera uma imagem a partir de um arquivo DockerFile, a flag -t é para definir o nome da imagem, e importante notar o 
  . (ponto) ao final do comando, este define onde deve ser executado no caso o . (ponto) é o diretório atual. <br/>
  
+
+ <h3>Enviar a imagem para o Docker Hub</h3>
+ <p>Para enviar a imagem para o Docker Hub é necessário seguir um a padrão de nomenclatura. A imagem deve iniciar com o nome do usuário usado no Docker Hub. Geralmente as imagens não são criadas seguindo esse padrão, dessa forma existe o comando <strong>docker tag</strong> para renomear a imagem gerada à partir do Dockerfile. Exemplo abaixo:</p>
+
+ <strong>docker login -u nomeUsuarioNoDockerHub</strong> == faz login no Docker Hub.<br/>
+ <strong>docker tag nomeDaImagem usuarioDockerHub/nomeDaImagem</strong> == .<br/>
+ <strong>docker push nomdeDaImage</strong> == envia a imagem para o repositorio do Docker Hub.<br/>
  
  <h3>Volumes docker</h3>
  <strong>docker volume create NOMEVOLUME</strong> === cria um novo volume docker.<br>
