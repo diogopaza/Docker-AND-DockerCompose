@@ -1,0 +1,10 @@
+FROM node:14
+WORKDIR /app-node
+ARG PORT=3010
+ENV PORT=$PORT
+EXPOSE $PORT
+COPY . .
+RUN npm install 
+ENTRYPOINT node index.js
+
+
