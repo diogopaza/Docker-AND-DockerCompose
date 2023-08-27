@@ -10,28 +10,16 @@ services:
     environment:
       POSTGRES_PASSWORD: "123"
       POSTGRES_USER: "diogo"
-      POSTGRES_DB: "db-teste"
+      POSTGRES_DB: "livro-database"
     ports:
       - 5432:5432
     volumes:
-      - /mnt/volume-docker:/var/lib/postgresql/data
-      - pg-local:/etc/postgresql      
-volumes:
-  pg-local:
-    driver: local
-    driver_opts:
-      type: "none"
-      o: "bind"
-      device: "$PWD/postgres-custom"  
-  
-
-  
-  
- 
-      
-    
-
-
-  
-
-  
+      - /mnt/volume-docker:/var/lib/postgresql/data 
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: mongo
+    ports:
+      - 27017:27017       	
