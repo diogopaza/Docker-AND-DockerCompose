@@ -13,9 +13,18 @@
 inicializar o serviço no Ubuntu == <strong>service docker start</strong>.
 
 <strong>docker images</strong> == lista as imagens disponiveis.
-
+<strong>docker start idContainer</strong> == inicia o container que está parado.<br/>
+<strong>docker stop idContainer</strong> == para o container selecionado.<br/>
+<strong>docker start idContainer</strong> == inicia o container que está parado.<br/>
 <strong>docker ps</strong> == lista os containers em atividade.<br/>
+<strong>docker inspect idImage</strong> == lista os detalhes da imagem.<br/>
+<strong>docker history idImage</strong> == visualiza as camadas da imagem.<br/>
 <strong>docker ps -a </strong> == lista todos os containers, incluindo os que estiverem parados.<br/>
+<strong>docker run -d idContainer </strong> == flag -d o conainer é executado em segundo plano no terminal.<br/>
+<strong>docker run -P idContainer</strong> == mapeia automaticamente as portas do container, com o -P maiúsculo não é possível especificar a porta.<br/>
+<strong>docker run -p  portaDaMinhaMaquina:portaContainer idContainer</strong> == a flag -p (minúsculo) mapeia de forma específica as portas do container.<br/>
+<strong>docker port idContainer</strong> == lista as portas do container.<br/>
+<strong>docker rm idContainer --force</strong> == para e exclui um container docker.<br/>
 <strong>docker system prune -a</strong> == limpa containeres nao utilizados.<br/>
 <strong>docker volumes prune</strong> == remove volumes nao utilizados.<br/>
 <strong>docker rmi <image_id></strong> == serve para excluir uma imagem do disco local.<br/>
@@ -27,13 +36,19 @@ docker também será a porta 3306 do Linux que esta rodando no WSL do Windows.
  <p>Exemplo de container docker com postgres ===  <strong>docker run -v postgres-dados:/var/lib/postgresql/data -p 5432:5432 -e POSTGRES_PASSWORD=123 postgres</strong>. Pode-se adicionar a opção -d para rodar em segundo <em>background</em></p>
  
  iptables -t nat -L -n é possível ver o redirecionamento.
+
+ <h3>Fazendo build a partir de um Dockerfile</h3>
+
+ <strong>docker build -t nomeDaImagem:1.0 .</strong> == gera uma imagem a partir de um arquivo DockerFile, a flag -t é para definir o nome da imagem, e importante notar o 
+ . (ponto) ao final do comando, este define onde deve ser executado no caso o . (ponto) é o diretório atual. <br/>
+ 
  
  <h3>Volumes docker</h3>
  <strong>docker volume create NOMEVOLUME</strong> === cria um novo volume docker.<br>
  <strong>docker volume ls</strong> === lista os volumes docker disponíveis.
  
  <p>
- <strong>docker exec -it meu_container /bin/bash </strong><br>
+ <strong>docker exec -it meu_container bash </strong><br>
  Esse comando irá executar um o bash que é nosso console no linux.
  A flag -i permite mapear a entrada do teclado para o bashs e -t reserva o terminal.
  
