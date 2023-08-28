@@ -49,8 +49,14 @@ docker também será a porta 3306 do Linux que esta rodando no WSL do Windows.
  <strong>docker login -u nomeUsuarioNoDockerHub</strong> == faz login no Docker Hub.<br/>
  <strong>docker tag nomeDaImagem usuarioDockerHub/nomeDaImagem</strong> == .<br/>
  <strong>docker push nomdeDaImage</strong> == envia a imagem para o repositorio do Docker Hub.<br/>
+
+ <h3>Persistindo dados em um container Docker</h3>
+
+  <strong>docker run -it -v caminhaMaquinaLocal:/caminhoDentroDoContainer --- exemplo executado em teste === docker run -it -v D:\volume-docker:/app ubuntu bash </strong> == usando bind mounts, onde uma pasta da maquina local é compartilhada com o container Docker. Ou o container pare de funcionar, ou algo do tipo os dados continuam persistidos na máquina local.<br/>
+  <strong>docker run -it --mount type=bind,source=D:\volume-docker2,target=/app2 ubuntu bash</strong> == exemplo para fazer um bind de uma pasta do host com o container Docker.<br/>
  
  <h3>Volumes docker</h3>
+ 
  <strong>docker volume create NOMEVOLUME</strong> === cria um novo volume docker.<br>
  <strong>docker volume ls</strong> === lista os volumes docker disponíveis.
  
