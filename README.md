@@ -56,9 +56,12 @@ docker também será a porta 3306 do Linux que esta rodando no WSL do Windows.
   <strong>docker run -it --mount type=bind,source=D:\volume-docker2,target=/app2 ubuntu bash</strong> == exemplo para fazer um bind de uma pasta do host com o container Docker.<br/>
  
  <h3>Volumes docker</h3>
+ <p>O próprio Docker gerencia os volumes, deixando muito mais seguro o processo de persistência dos dados.</p>
  
- <strong>docker volume create NOMEVOLUME</strong> === cria um novo volume docker.<br>
- <strong>docker volume ls</strong> === lista os volumes docker disponíveis.
+ <strong>docker volume create NOMEVOLUME</strong> === cria um novo volume docker.<br/>
+ <strong>docker volume ls</strong> === lista os volumes docker disponíveis.<br/>
+ <strong>docker volume inspect nomeDoVolume</strong> === exibe os detalhes do volume selecionado.<br/>
+ <strong>docker run -it -v nomdeDoVolume:/pastaNoContainer nomeContainer bash</strong> === exemplo de uso de volume em um container docker.<br/> 
  
  <p>
  <strong>docker exec -it meu_container bash </strong><br>
