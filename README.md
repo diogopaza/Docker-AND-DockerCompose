@@ -67,6 +67,11 @@ docker também será a porta 3306 do Linux que esta rodando no WSL do Windows.
  <strong>docker exec -it meu_container bash </strong><br>
  Esse comando irá executar um o bash que é nosso console no linux.
  A flag -i permite mapear a entrada do teclado para o bashs e -t reserva o terminal.
+
+ <h3>Redes no Docker</h3>
+
+  <strong>docker network ls</strong> === lista as redes Docker.<br/>
+
  
  <h2>DOCKER-COMPOSE</h2>
  <p>Configurado atraves de um arquivo <strong>YAML</strong> tem a capacidade de rodar varios containers, sem a necessidade de subir cada container manualmente.</p>
