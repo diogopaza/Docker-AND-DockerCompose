@@ -71,9 +71,14 @@ docker também será a porta 3306 do Linux que esta rodando no WSL do Windows.
 
  <h3>Redes no Docker</h3>
 <p>Com o comando <strong>docker inspect idContainer</strong> no final é possível ver a rede do docker, o nome da rede e o endereço ip do container.</strong></p>
-<p>O Docker possue a rede <strong>host</strong>, ao usar essa rede é retirada a abstração entre o Container e a máquina local, dessa forma sendo acessado os recursos do Docker diretamente via localhost, e também possue a rede <strong>none</strong> na qual o container fica sem uma interface de rede.</p>
+<p>O Docker possue a rede <strong>host</strong>, ao usar essa rede é retirado o isolamento entre o Container e a máquina local, dessa forma sendo acessado os recursos do Docker diretamente via localhost, e também possue a rede <strong>none</strong> na qual o container fica sem uma interface de rede.</p>
   <strong>docker network ls</strong> === lista as redes Docker.<br/>
   <strong>docker network create --driver bridge nomeDaRede</strong> === comando para criar uma rede no Docker.<br/>
+
+<h3>Comunicação através de redes Docker</h3>
+<p>Abaixo o primeiro comando tem um servidor de um banco de dados mongo, este ficará responsável por disponibilizar os dados para uma aplicação, representada pelo segundo comando. A falg --name é de fundamental importância pois define o nome do host do banco de dados.</p>
+<strong>docker run -d --network nomeDaRede --name meu-mongo mongo:4.4.6</strong> === cria o container com o banco de dados mongo.<br/>
+<strong>docker run -d --network nomeDaRede --name nomeDoContainer -p 3000:3000</strong> === máquina com a aplicação backend que irá fazer uso do banco de dados mongo do container definido pelo nome de meu-mongo.<br/>
 
 
  
