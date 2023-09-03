@@ -28,6 +28,7 @@ inicializar o serviço no Ubuntu == <strong>service docker start</strong>.
 <strong>docker system prune -a</strong> == limpa containeres nao utilizados.<br/>
 <strong>docker volumes prune</strong> == remove volumes nao utilizados.<br/>
 <strong>docker rmi <image_id></strong> == serve para excluir uma imagem do disco local.<br/>
+<strong>docker rmi <image_id></strong> == define um nome para o Container.<br/>
 
 exemplo de comando para inicializar uma imagem docker Mysql, importante observar o uso do atributo -p indicando a que a porta 3306 do
 docker também será a porta 3306 do Linux que esta rodando no WSL do Windows.
@@ -69,8 +70,11 @@ docker também será a porta 3306 do Linux que esta rodando no WSL do Windows.
  A flag -i permite mapear a entrada do teclado para o bashs e -t reserva o terminal.
 
  <h3>Redes no Docker</h3>
-
+<p>Com o comando <strong>docker inspect idContainer</strong> no final é possível ver a rede do docker, o nome da rede e o endereço ip do container.</strong></p>
+<p>O Docker possue a rede <strong>host</strong>, ao usar essa rede é retirada a abstração entre o Container e a máquina local, dessa forma sendo acessado os recursos do Docker diretamente via localhost, e também possue a rede <strong>none</strong> na qual o container fica sem uma interface de rede.</p>
   <strong>docker network ls</strong> === lista as redes Docker.<br/>
+  <strong>docker network create --driver bridge nomeDaRede</strong> === comando para criar uma rede no Docker.<br/>
+
 
  
  <h2>DOCKER-COMPOSE</h2>
