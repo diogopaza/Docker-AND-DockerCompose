@@ -83,9 +83,11 @@ docker também será a porta 3306 do Linux que esta rodando no WSL do Windows.
 
  
  <h2>DOCKER-COMPOSE</h2>
+ <p>Ferramenta de coordenação de containers. Nos auxilia a compor diversos containers através de um único arquivo</p>
  <p>Configurado atraves de um arquivo <strong>YAML</strong> tem a capacidade de rodar varios containers, sem a necessidade de subir cada container manualmente.</p>
   <p>YAML (uma sigla que significa YAML Ain’t Markup Language) não é propriamente uma linguagem de programação mas sim uma sintaxe para a criação de ficheiros de configuração. A estrutura do YAML é determinada pela sua indentação, sendo a indentação definida pelo numero de espaços no inicio da cada linha e podem ser zero, dois ou múltiplos de dois. A estrutura de cada bloco é constituída por níveis, sendo que o nível anterior é considerado parent e o inferior children. O caracter - indica o inicio de uma listagem de variaveis ou atributos que se encontram ao mesmo nível, e que deve ser considerado na contagem de espaços na indentação. Em YAML os comentários são indicados pelo caracter #. Se o comentário estiver entre dois blocos de código deve ser escrito sem espaços à esquerda, se for escrito após uma linha de código deve sempre ser precedido de um espaço ou de uma ou mais tabulações para que os comentários fiquem alinhados.</p>
-  
+
+<strong>docker-compose up</strong> === subindo os containers que estiverem no arquivo .yml da pasta onde o comando foi executado.  
 <strong>docker-compose -f <nomdeDoArquivo.yml> up</strong> === subindo os containers com um único comando.
  
  </p>
