@@ -39,7 +39,7 @@ docker também será a porta 3306 do Linux que esta rodando no WSL do Windows.
  iptables -t nat -L -n é possível ver o redirecionamento.
 
  <h3>Fazendo build a partir de um Dockerfile</h3>
- <strong>Importante lembrar que para fazer o push da imagem o nome da imagem deve iniciar com o usuario do Docker Hub.</strong>
+ <strong>Importante lembrar que para fazer o push da imagem o nome da imagem deve iniciar com o usuario do Docker Hub.</strong><br>
  <strong>docker build -t nomeDaImagem:1.0 .</strong> == gera uma imagem a partir de um arquivo DockerFile, a flag -t é para definir o nome da imagem, e importante notar o 
  . (ponto) ao final do comando, este define onde deve ser executado no caso o . (ponto) é o diretório atual. <br/>
  
